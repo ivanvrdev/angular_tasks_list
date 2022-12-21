@@ -1,0 +1,19 @@
+<li 
+  class="list-group-item my-1 bg-light border-0"
+  [ngClass]="{
+    'border-5': task.reminder,
+    'border-start': task.reminder,
+    'border-success': task.reminder
+  }"
+  (click)="onToggle(task)"
+>
+  <div class="d-flex justify-content-between">
+    <p class="fw-bold mb-0">{{task.text}}</p>
+    <fa-icon 
+      [icon]="faTimes"
+      class="text-danger"
+      (click)="onDelete(task)"
+    ></fa-icon>
+  </div>
+  <p class="mb-0">{{task.date}}</p>
+</li>

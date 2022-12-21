@@ -1,0 +1,10 @@
+<div class="d-flex justify-content-between align-items-center">      
+  <h1 class="">{{title}}</h1>
+  <app-button
+    *ngIf="hasRoute('/')"
+    color='{{showAddTask ? "secondary" : "success"}}' 
+    text='{{showAddTask ? "Close" : "Add"}}' 
+    (btnClick)="toggleAddTask()"
+  >
+  </app-button>
+</div>
